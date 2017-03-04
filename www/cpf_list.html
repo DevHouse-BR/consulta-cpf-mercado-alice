@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>CPF</title>
+<link href="Styles/alice/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{Header} 
+<!-- BEGIN Record cpfSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="30%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/alice/Images/Spacer.gif" border="0"></td> 
+            <th>Busca Cpf </th>
+ 
+            <td class="HeaderRight"><img src="Styles/alice/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th width="50">CPF</th>
+ 
+            <td><input maxlength="11" size="50" value="{s_cpf}" name="{s_cpf_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}">Limpar</a> </td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="image" src="Styles/alice/Images/en/ButtonSearch.gif" value="Busca" border="0" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record cpfSearch --><br>
+<!-- BEGIN Grid cpf -->
+<table cellspacing="0" cellpadding="0" width="80%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/alice/Images/Spacer.gif" border="0"></td> 
+          <th>Lista de Cpf </th>
+ 
+          <td class="HeaderRight"><img src="Styles/alice/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp; </th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_cpf --><a href="{Sort_URL}">Cpf</a>
+          <!-- BEGIN Asc_On --><img src="Styles/alice/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/alice/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cpf --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_nome --><a href="{Sort_URL}">Nome</a>
+          <!-- BEGIN Asc_On --><img src="Styles/alice/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/alice/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nome --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_situacao --><a href="{Sort_URL}">Situacao</a>
+          <!-- BEGIN Asc_On --><img src="Styles/alice/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/alice/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_situacao --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}">Ver</a>&nbsp;</td> 
+          <td>{cpf}&nbsp;</td> 
+          <td>{nome}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{situacao}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td><a href="{Alt_Detail_Src}">Ver</a>&nbsp;</td> 
+          <td>{Alt_cpf}&nbsp;</td> 
+          <td>{Alt_nome}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_situacao}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">Nenhum registro </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4"><a href="{cpf_Insert_Src}">Novo</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/alice/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/alice/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}
+            de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/alice/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/alice/Images/Last.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid cpf --><br>
+{Footer} 
+</body>
+</html>
